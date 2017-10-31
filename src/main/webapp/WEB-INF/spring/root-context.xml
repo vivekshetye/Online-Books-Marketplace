@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+		
+		<bean id="userValidator" class="com.neu.onlineBMP.VALIDATOR.UserValidator"></bean>
+		<bean id="userDao" class="com.neu.onlineBMP.DAO.UserDAO" ></bean>
+		<bean id="bookDao" class="com.neu.onlineBMP.DAO.BookDAO" ></bean>
+		<bean id="messageDao" class="com.neu.onlineBMP.DAO.MessageDAO" ></bean>
+		<bean id="replyDao" class="com.neu.onlineBMP.DAO.ReplyDAO" ></bean>
+		
+		
+		
+		
+		<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+
+		 <!-- setting maximum upload size -->
+		<property name="maxUploadSize" value="100000000" />
+
+	</bean>
+		
+</beans>
